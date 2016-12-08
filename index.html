@@ -7,8 +7,11 @@
   
 <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="results.js"></script>
   <script src="https://use.fontawesome.com/1c47a2d368.js"></script>
+  
   
 
 
@@ -70,9 +73,11 @@
 								<hr class="star-light">
 								<span class="skills">4th Year IT Management Student @ ITT Dublin</span>
 								<hr class="star-light">
-								<a href="https://ie.linkedin.com/in/gavin-daly-5491528b" target="_blank" data-toggle="tooltip" title="Find me on LinkedIN!"><i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i></a>
+								<a href="https://ie.linkedin.com/in/gavin-daly-5491528b" target="_blank" data-toggle="tooltip" title="Find me on LinkedIN!">
+									<i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
 								
-								<a href="https://github.com/x00114936" target="_blank" data-toggle="tooltip" title="Find me on GitHub!"><i class="fa fa-github fa-5x" aria-hidden="true"></i> </a>
+								<a href="https://github.com/x00114936" target="_blank" data-toggle="tooltip" title="Find me on GitHub!">
+									<i class="fa fa-github fa-3x" aria-hidden="true"></i> </a>
 								<hr class="star-light">
 							</div>
 							
@@ -162,7 +167,8 @@
 									</div>
 									<div id="year4" class="panel-collapse collapse">
 									  <div class="table-resposnive">
-									  <table class="table">
+									  <div ng-app="results" ng-controller="resultsController">
+									  <table>
 												<thead>
 												  <tr>
 													<th>Subject</th>
@@ -170,17 +176,14 @@
 												  </tr>
 												</thead>
 												<tbody>
-												  <tr>
-													<td>Interatice Media & Design</td>
-													<td>Due January 2017</td>
+												  <tr ng-repeat="x in results">
+													<td>{{x.subject}}</td>
+													<td>{{x.grade}}</td>
 												  </tr>
-												  <tr>
-													<td>Cloud Architecture</td>
-													<td>Due January 2017</td>
-												  </tr>
+												  
 												</tbody>
 											  </table>
-									  
+									  </div>
 									  </div>
 									</div>
 								  </div>
@@ -296,7 +299,7 @@
 		
 		<div class="container">
 			<div class="row" id="WorkExperience">
-					<div class="col-lg-12" align="center" style="padding-top:20px">
+					<div class="col-lg-12" align="justify" style="padding-top:20px">
 						<h4>
 						<br><br><br><br><br><br>
 						<div class="well">Work Experience</div>	
@@ -305,8 +308,19 @@
 						<div class="col-md-6">
 							<div class="thumbnail">
 								<a href="http://www.bmsireland.ie/Pages/Home.aspx" data-toggle="tooltip" title="Click here to visit Bristol Myers Squibb Ireland">
-									<img class="img-resposnive" src="bms.png" alt="" width="300px" Height="300px" align="left" style="padding-right:10px"></a>
-								<p>bms bms bms bms bms bms bms bms bms bmsbms bms bms bms bmsbms bms bms bms bmsbms bms bms bms bmsbms bms bms bms bmsbms bms bms bms bms <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br></p>
+									<img class="img-resposnive" src="bms.png" alt="" width="300px" Height="300px" align="left" style="padding-right:30px"></a>
+								<p>I have worked for the External Manufacturing divison of Bristol Myers Squibb since January 2016. My duties here include:
+										<ul>
+											  <li>Metric Creation
+														Assisting the Data Manager with the creation of various Metrics that are used by the External Manufacturing division to analyze their business and supplier performance. 
+													</li>
+											  <li>Data Management
+Responsible for preparing various data sources by ‘cleaning’ the data. This is to ensure the data met the required standards and was consistent across the board.
+</li>
+											  <li>Data Visualisations 
+Responsible for designing, creating and updating of Data Visualisations using the Tibco Spotfire application. These visualisations is how the External Manufacturing division accessed the various metrics used to analyze supplier performance. 
+</li>
+											</ul><br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br></p>
 					
 							</div>
 						</div>
